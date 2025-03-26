@@ -30,3 +30,4 @@ A real-time collaborative To-Do List backend built with **Node.js**, **Express**
 
 ## 📁 Project Structure
 
+backend/ ├── config/ # Singleton DB connection │ └── mongo.ts ├── controllers/ # TaskController (handles logic) │ └── taskControllers.ts ├── factories/ # TaskFactory (task creation) │ └── TaskFactory.ts ├── models/ # Mongoose Task schema │ └── task.ts ├── routes/ # Task routing (REST + sockets) │ └── taskRoutes.ts ├── index.ts # App entry point (Express + Socket.IO) ├── .env # MongoDB URI └── README.md # You're reading it 👋
