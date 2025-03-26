@@ -49,32 +49,32 @@ backend/
 
 Base URL: http://localhost:3000/api/tasks
 
-Method	Endpoint	Description
-GET	/tasks	Fetch all tasks
-POST	/tasks	Create a new task
-PUT	/tasks/:id	Update a task
-DELETE	/tasks/:id	Delete a task
+- Method	Endpoint	Description
+- GET	/tasks	Fetch all tasks
+- POST	/tasks	Create a new task
+- PUT	/tasks/:id	Update a task
+- DELETE	/tasks/:id	Delete a task
 
 
 📡 Real-Time Events (Socket.IO)
-All task changes are broadcast to all connected clients via WebSocket events.
+- All task changes are broadcast to all connected clients via WebSocket events.
 
-Event	Payload	Description
-taskAdded	Task object	Emitted when a task is created
-taskUpdated	Updated task object	Emitted on update
-taskDeleted	Task ID (string)	Emitted when task is deleted
-Clients listen for these events and update the UI without refreshing.
+- Event	Payload	Description
+- taskAdded	Task object	Emitted when a task is created
+- taskUpdated	Updated task object	Emitted on update
+- taskDeleted	Task ID (string)	Emitted when task is deleted
+- Clients listen for these events and update the UI without refreshing.
 
 
 🧠 Design Decisions & Patterns
-This backend is structured for clarity, testability, and maintainability using common design patterns:
+- This backend is structured for clarity, testability, and maintainability using common design patterns:
 
 📐 Patterns Used
-Pattern	Purpose
-Controller	Encapsulates request handling (e.g., TaskController)
-Repository	Abstracts database access via TaskRepository
-Factory	Provides structured object creation (TaskFactory)
-Singleton	Ensures a single MongoDB connection (MongoConnection)
-Pub/Sub	Socket.IO acts as a lightweight event bus for real-time collaboration
+- Pattern	Purpose
+- Controller	Encapsulates request handling (e.g., TaskController)
+- Repository	Abstracts database access via TaskRepository
+- Factory	Provides structured object creation (TaskFactory)
+- Singleton	Ensures a single MongoDB connection (MongoConnection)
+- Pub/Sub	Socket.IO acts as a lightweight event bus for real-time collaboration
 
 
