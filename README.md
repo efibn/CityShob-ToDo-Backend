@@ -33,17 +33,23 @@ A real-time collaborative To-Do List backend built with **Node.js**, **Express**
 backend/
 ├── config/          # MongoDB Singleton connection
 │   └── mongo.ts
+
 ├── controllers/     # TaskController with request logic
 │   └── taskControllers.ts
+
 ├── factories/       # TaskFactory for structured creation
 │   └── TaskFactory.ts
+
 ├── models/          # Mongoose schema & TypeScript interface
 │   └── task.ts
+
 ├── routes/          # Express routing layer
 │   └── taskRoutes.ts
+
 ├── index.ts         # Main entry point (Express + Socket.IO)
 ├── .env             # Environment config (Mongo URI)
 
+---
 
 🌐 API Endpoints
 
@@ -55,6 +61,7 @@ Base URL: http://localhost:3000/api/tasks
 - PUT	/tasks/:id	Update a task
 - DELETE	/tasks/:id	Delete a task
 
+---
 
 📡 Real-Time Events (Socket.IO)
 - All task changes are broadcast to all connected clients via WebSocket events.
@@ -65,6 +72,7 @@ Base URL: http://localhost:3000/api/tasks
 - taskDeleted	Task ID (string)	Emitted when task is deleted
 - Clients listen for these events and update the UI without refreshing.
 
+---
 
 🧠 Design Decisions & Patterns
 - This backend is structured for clarity, testability, and maintainability using common design patterns:
